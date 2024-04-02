@@ -2,7 +2,7 @@
 
 
 - Title: `database schema design for different system`
-- Authors: `Bharat Makwama`
+- Author: `Bharat Makwama`
 
 ## Use
 
