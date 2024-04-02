@@ -91,7 +91,7 @@ CREATE TABLE task_assignees(
     id int primary key auto_increment,
     task_collebrator_id int references task_collabration(id) on delete cascade on update cascade,
     task_id int references tasks(id) on delete cascade on update cascade,
-    stage varchar(20) check(status in ('to-do','in-progress','completed')),
+    stage varchar(20) check(stage in ('to-do','in-progress','completed')),
     created_at timestamp default current_timestamp,
     updated_at timestamp on update current_timestamp
 );

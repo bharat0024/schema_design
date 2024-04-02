@@ -49,7 +49,7 @@ CREATE TABLE item_master(
     unit_cost varchar(20),
     created_at timestamp default current_timestamp,
     updated_at timestamp on update current_timestamp
-)
+);
 CREATE TABLE items(
     id int primary key auto_increment,
     description varchar(20),
@@ -67,10 +67,10 @@ CREATE TABLE inventory_movements(
     updated_at timestamp on update current_timestamp
 );
 
-CREATE TABLE products_in_order(
+CREATE TABLE items_in_order(
     id int primary key auto_increment,
     order_id int references order_master(id) on delete cascade on update cascade,
-    product_id int references products(id) on delete cascade on update cascade,
+    item_id int references items(id) on delete cascade on update cascade,
     quantity int not null
 );
 CREATE TABLE order_master(

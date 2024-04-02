@@ -15,7 +15,7 @@ CREATE TABLE defficulty_level(
     id int primary key auto_increment,
     level varchar(20)
 );
-CREATE TABLE racipe(
+CREATE TABLE recipe(
     id int primary key auto_increment,
     name varchar(20),
     description varchar(50),
@@ -131,12 +131,12 @@ CREATE TABLE meal_based_lists(
 CREATE TABLE user_recipe_based_shopping_lists(
     id int primary key auto_increment,
     user_id int references users(id) on delete cascade on update cascade,
-    list_id int references shopping_list(id) on delete cascade on update cascade
+    list_id int references shopping_lists(id) on delete cascade on update cascade
 );
 CREATE TABLE user_meal_based_shopping_lists(
     id int primary key auto_increment,
     user_id int references users(id) on delete cascade on update cascade,
-    list_id int references meal_based_list(id) on delete cascade on update cascade
+    list_id int references meal_based_lists(id) on delete cascade on update cascade
 );
 
 #user social module

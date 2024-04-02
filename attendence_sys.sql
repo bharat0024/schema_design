@@ -40,7 +40,7 @@ CREATE TABLE activity_type(
 );
 CREATE TABLE attendence(
     id int primary key auto_increment,
-    employee_id int references users(id) on update cascade on delete cascade,
+    employee_id int references employee(id) on update cascade on delete cascade,
     activity int references activity_type(id) on update cascade on delete cascade,
     created_at timestamp default current_timestamp,
     updated_at timestamp on update current_timestamp
