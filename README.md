@@ -1,6 +1,5 @@
 # Database Schema Design
 
-## Papar Information
 
 - Title: `database schema design for different system`
 - Authors: `Bharat Makwama`
